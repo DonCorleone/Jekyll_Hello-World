@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Staff</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">   
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link type="application/atom+xml" rel="alternate" href="/feed.xml" />
     <!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Staff</title>
@@ -42,7 +43,7 @@
 <ul>
   
     <li>
-      <h2><a href="/authors/jill.html">Jill Smith</a></h2>
+      <h2><a href="/authors/jill.html">Jill Smithzz</a></h2>
       <h3>Chief Editor</h3>
       <p><p>Jill is an avid fruit grower based in the south of France.</p>
 </p>
@@ -56,6 +57,17 @@
     </li>
   
 </ul>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
